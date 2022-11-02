@@ -35,6 +35,7 @@ namespace XafExportUsersAndRoles.Module.BusinessObjects
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
         }
 
+        string backupName;
         FileData file;
         DateTime date;
 
@@ -43,7 +44,15 @@ namespace XafExportUsersAndRoles.Module.BusinessObjects
             get => date;
             set => SetPropertyValue(nameof(Date), ref date, value);
         }
+
         
+        [Size(SizeAttribute.DefaultStringMappingFieldSize)]
+        public string BackupName
+        {
+            get => backupName;
+            set => SetPropertyValue(nameof(BackupName), ref backupName, value);
+        }
+
         public FileData File
         {
             get => file;

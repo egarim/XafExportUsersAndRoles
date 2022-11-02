@@ -81,7 +81,7 @@ namespace XafExportUsersAndRoles.Module.Controllers
 
                 foreach (object? selectedObject in this.View.SelectedObjects)
                 {
-                    cloneHelper.Clone(this.View.CurrentObject);
+                    cloneHelper.Clone(selectedObject);
                 }
                 targetSession.CommitChanges();
                 //Delete users that come with the roles
